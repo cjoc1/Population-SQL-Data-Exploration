@@ -287,3 +287,39 @@ SELECT name, median_age
 FROM countries
 ORDER BY median_age ASC
 LIMIT 15;
+-- Questions--
+--1. Is there a correlation between population and percent one-year change?
+
+SELECT name, population, percent_one_year_change
+FROM countries
+ORDER BY population DESC
+LIMIT 15;
+
+--2. Is there a correlation between population density and fertility rate?
+
+SELECT name, density_per_sq_km, fertility_rate
+FROM countries
+ORDER BY density_per_sq_km DESC
+LIMIT 15;
+
+--3. Is there a correlation between median age and percent of world population?
+SELECT name, median_age, percent_of_world_pop
+FROM countries
+ORDER BY median_age DESC
+LIMIT 15;
+--4. Is there a correlation between net migrants and fertility rate?
+SELECT name, net_migrants, fertility_rate
+FROM countries
+ORDER BY net_migrants DESC
+LIMIT 15;
+--5. Is there a correlation between area and percent of world population?
+SELECT name, area_sq_km, percent_of_world_pop
+FROM countries
+ORDER BY area_sq_km DESC
+LIMIT 15;
+--6. Is there a correlation between fertility rate and median age?
+SELECT name, fertility_rate, median_age
+FROM countries
+WHERE fertility_rate > 2.0
+ORDER BY fertility_rate DESC
+LIMIT 15;
